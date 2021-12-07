@@ -17,9 +17,13 @@ body {
   background-color: dodgerblue;
   width: 100%;
 
+  -webkit-transform: translateY(var(--pos));
+  transform: translateY(var(--pos));
+
   padding: 15px;
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
 
   transition-duration: 0.5s;
