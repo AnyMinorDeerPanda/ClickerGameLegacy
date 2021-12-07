@@ -14,7 +14,7 @@ body {
 }
 
 .shop {
-  background-color: royalblue;
+  background-color: dodgerblue;
   width: 100%;
 
   padding: 15px;
@@ -57,6 +57,8 @@ p {
 button {
   font-family: var(--text-font);
   font-size: var(--text-sizing);
+
+  background-color: lightsalmon;
   color: white;
   
   border: none;
@@ -65,5 +67,5 @@ button {
 }
 
 .shop button {
-  background-color: lightskyblue ;
+  background-color: deepskyblue;
 }
