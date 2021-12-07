@@ -9,9 +9,12 @@
   <body>
     <div id="shop" class="shop" style="top: -75px;">
       <button onclick="closeShop()">Close</button>
-      <button onclick="getClick(1)">+1 Clicks (10)</button>
+      <button onclick="getClick(1)">+1 Click (10)</button>
       <button onclick="getClick(10)">+10 Clicks (100)</button>
       <button onclick="getClick(100)">+100 Clicks (1000)</button>
+      <button onclick="getClicker(1)">+1 Clicker (100)</button>
+      <button onclick="getClicker(10)">+10 Clickers (1000)</button>
+      <button onclick="getClicker(100)">+100 Clickers (10000)</button>
     </div>
     <div class="contents">
       <div class="header">
@@ -19,7 +22,7 @@
       </div>
       <div class="clicker">
         <div>
-          <button onclick="increment()">Click Me!</button>
+          <button onclick="increment(clicks)">Click Me!</button>
           <p>Current Score: <p id="score">0</p></p>
           <p>Total Score: <p id="totalScore">0</p></p>
         </div>
