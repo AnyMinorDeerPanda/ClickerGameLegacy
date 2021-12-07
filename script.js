@@ -38,10 +38,11 @@ function reset() {
 }
 
 function getClick(clickNum) {
+  console.log(clickNum)
   if (!(score > clickNum * 10)) return;
   score = parseInt(score) - (parseInt(clickNum) * 10)
   
-  clicks++
+  clicks = parseInt(clicks) + parseInt(clickNum)
   localStorage.setItem('clicks', clicks)
   refreshValue('score', score)
 }
