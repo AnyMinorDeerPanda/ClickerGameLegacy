@@ -1,0 +1,69 @@
+html {
+  --text-sizing: 100%;
+  --text-font: "Comic Sans MS";
+
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+}
+
+.shop {
+  background-color: royalblue;
+  width: 100%;
+
+  padding: 15px;
+  position: absolute;
+  display: flex;
+  gap: 25px;
+
+  transition-duration: 0.5s;
+}
+
+.contents {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.clicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header {
+  padding: 15px;
+}
+
+.bottom {
+  padding: 15px;
+}
+
+p {
+  font-family: var(--text-font);
+  font-size: var(--text-sizing);
+}
+
+button {
+  font-family: var(--text-font);
+  font-size: var(--text-sizing);
+  color: white;
+  
+  border: none;
+  border-radius: 12px;
+  padding: 5px 15px;
+}
+
+.shop button {
+  background-color: lightskyblue ;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Clicker Game 2021</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="shop" class="shop" style="top: -75px;">
+      <button onclick="closeShop()">Close</button>
+      <button onclick="getClick(1)">+1 Clicks (10)</button>
+      <button onclick="getClick(10)">+10 Clicks (100)</button>
+    </div>
+    <div class="contents">
+      <div class="header">
+        <button onclick="openShop()">Buy Stuff</button>
+      </div>
+      <div class="clicker">
+        <div>
+          <button onclick="increment()">Click Me!</button>
+          <p>Current Score: <p id="score">0</p></p>
+          <p>Total Score: <p id="totalScore">0</p></p>
+        </div>
+      </div>
+      <div class="bottom">
+        <button onclick="reset()">Reset LocalStorage</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
