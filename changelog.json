@@ -1,0 +1,17 @@
+{
+  "Changelog v2022.100b": [
+    "Added a new experimental shop",
+    "Changed the Changelog to be automated",
+    "Changed account to be in session storage"
+  ],
+  "Changelog v2022.000b": [
+    "Added exporting / importing saves",
+    "Added accounts",
+    "Added Leaderboard",
+    "Added Clicks Indicator",
+    "Changed shop to look nicer",
+    "Changed button to look nicer",
+    "Removed ClickerEfficiency",
+    "i forgor 💀"
+  ]
+}

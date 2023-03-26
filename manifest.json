@@ -1,0 +1,16 @@
+{
+  "short_name": "CG 2021",
+  "name": "Clicker Game 2021",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "520x520",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#0070FF",
+  "display": "standalone"
+}

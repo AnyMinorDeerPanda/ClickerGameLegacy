@@ -1,38 +1,95 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      :root {
+        --pos: -100%;
+      }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Clicker Game 2021</title>
+    <title>[BETA] Clicker Game 2022</title>
+    <link rel="icon" type="image/png" href="/assets/icon.png">
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="520x520" href="assets/icon.png">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <div id="shop" class="shop" style="">
-      <button onclick="closeShop()">Close</button>
-      <button onclick="getItem('clicks', 1)">+1 Click (10)</button>
-      <button onclick="getItem('clicks', 100)">+100 Clicks (1,000)</button>
-      <button onclick="getItem('clicks', 1000)">+1,000 Clicks (10,000)</button>
-      <button onclick="getItem('clickers', 1)">+1 Clicker (100)</button>
-      <button onclick="getItem('clickers', 10)">+10 Clickers (1,000)</button>
-      <button onclick="getItem('clickers', 100)">+100 Clickers (10,000)</button>
-      <button onclick="getItem('clickerEfficiency', 1)">+1 Clicker Efficiency (10,000)</button>
+    <noscript>Please Enable JavaScript to use this website.</noscript>
+    <div id="shop" class="shop">
+      <div>
+        <button onclick="closeShop()" class="close"></button>
+        <p>Upgrade Shop</p>
+      </div>
+      <!-- <div class="purchase">
+        <button onclick="getItem('clicks', 1)">+1 Click</button>
+        <button onclick="getItem('clicks', 100)">+100 Clicks</button>
+        <button onclick="getItem('clicks', 1000)">+1,000 Clicks</button>
+        <button onclick="getItem('clickers', 1)">+1 Clicker</button>
+        <button onclick="getItem('clickers', 10)">+10 Clickers</button>
+        <button onclick="getItem('clickers', 100)">+100 Clickers</button>
+      </div> -->
+      <div class="purchase">
+        <input id="amount" onchange="updatePrice()" type="number" value=1></input>
+        <select id="item" onchange="updatePrice()">
+          <option value="clicks">+Click</option>
+          <option value="clickers">+Clicker</option>
+        </select>
+        <p id="price">[price]</p>
+        <button onclick="purchase()">Purchase</button>
+      </div>
     </div>
+    <!--
+    <div class="popups">
+      <div id="saveCode" class="popup" style="display: none;">
+        <h>Save Code</h>
+        <input id="saveInput" READONLY>
+        </input>
+      </div>
+    </div>
+    -->
     <div class="contents">
       <div class="header">
         <button onclick="openShop()">Buy Stuff</button>
-      </div>
-      <div class="clicker">
-        <div>
-          <button onclick="increment(stats.clicks)">Click Me!</button>
+        <div class="scoreboard">
           <p>Current Score: <p id="score">0</p></p>
           <p>Total Score: <p id="totalScore">0</p></p>
         </div>
+        <a href="/login"><div id="account"></div></a>
+        <!--<script src="https://loginxtractspace.anyminordeerpanda.repl.co/js/auth.js"></script>-->
+      </div>
+      <div class="clicker">
+        <div>
+          <button class="main" onclick="increment(stats.clicks)"></button>
+          <p id="clickNum">+</p>
+        </div>
       </div>
       <div class="bottom">
-        <button onclick="reset()">Reset LocalStorage</button>
-        <p style="color: red;">This will reset ALL of your stats. Only do it if your game is not working correctly.</p>
+        <!--<button onclick="reset()">Reset LocalStorage</button>-->
+        <div id="saveBox">
+          <button onclick="exportSave()">Export Save</button>
+          <button onclick="importSave()">Import Save</button>
+          <input id="save" value=""></input>
+        </div>
+      </div>
+      <div class="leaderboard">
+        <h1>Leaderboard</h1>
+        <ol id="leaderboard">
+          <li>USERNAME - 9999999</li>
+          <li>USERNAME - 9999999</li>
+          <li>USERNAME - 9999999</li>
+          <li>USERNAME - 9999999</li>
+          <li>USERNAME - 9999999</li>
+          <li>USERNAME - 9999999</li>
+          <li>USERNAME - 9999999</li>
+          <li>USERNAME - 9999999</li>
+          <li>USERNAME - 9999999</li>
+        </ol>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="main.js"></script>
+    <script src="game.js"></script>
   </body>
 </html>
